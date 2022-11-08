@@ -1,0 +1,10 @@
+include:
+  - project: diddledani/snapcraft-multiarch-gitlab-ci
+    ref: main
+    file: /snapcraft.yml
+
+build-amd64:
+  extends: [.snapcraft, .amd64]
+build-arm64:
+  extends: [.snapcraft, .arm64]
+
